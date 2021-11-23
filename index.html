@@ -1,0 +1,30 @@
+<div id="app">
+  <p>234</p>
+  <p>{{counter}}</p>
+  <p k-text="counter"></p>
+  <p k-html="desc"></p>
+  <button @click="onclick">button</button>
+  <input type="text" k-model="foo">
+  <p>{{foo}}</p>
+</div>
+<!-- <script src="../node_modules/vue/dist/vue.js"></script> -->
+<script src="./kvue.js"></script>
+<script>
+  const app = new KVue({
+    el: '#app',
+    data: {
+      counter: 1,
+      foo: '',
+      desc: '<span style="color:red">村长真棒</span>'
+    },
+    methods: {
+      onclick() {
+        this.counter++
+        console.log('执行方法拉');
+      }
+    },
+  })
+  // setInterval(() => {
+  //   app.counter++
+  // }, 1000);
+</script>
