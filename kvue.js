@@ -1,4 +1,4 @@
-function defineActive(params) {
+function defineReactive(params) {
   
 }
 
